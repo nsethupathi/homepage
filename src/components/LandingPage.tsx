@@ -1,5 +1,5 @@
 import React, {FunctionComponent} from "react";
-import './LandingPage.css'
+import '../css/LandingPage.css'
 
 export const LandingPage: FunctionComponent = () => {
     return (

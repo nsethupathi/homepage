@@ -1,0 +1,7 @@
+.MusicParent {
+    flex-direction: column;
+}
+
+.MusicParent details {
+    padding-top: 1rem;
+}
