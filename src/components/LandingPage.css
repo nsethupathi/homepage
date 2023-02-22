@@ -1,16 +1,24 @@
-.LandingPage {
-    text-align: center;
-    background-color: #282c34;
+.LandingParent {
+    background-color: #ffe6cc;
+    height: auto;
+    flex-direction: row;
+    display: flex;
 }
 
-.Landing-header {
-    min-height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.LandingPage {
+    text-align: center;
 }
 
 .customNav {
     flex-direction: row;
+}
+
+.LandingPage img {
+    width: 400px;
+    height: auto;
+}
+
+.Greeting {
+    display: flex;
+    padding: 1rem
 }

@@ -1,11 +1,18 @@
 import React, {FunctionComponent} from "react";
 import './LandingPage.css'
-import {Link} from "react-router-dom";
 
 export const LandingPage: FunctionComponent = () => {
     return (
-        <div className={"LandingPage"}>
-            <img src={process.env.PUBLIC_URL + '/dt_napes.jpg'} alt={"Homepage Photo"}></img>
+        <div className={"LandingParent"}>
+            <div className={"LandingPage"}>
+                <img src={process.env.PUBLIC_URL + '/dt_napes.jpg'} alt={"Homepage Photo"}></img>
+            </div>
+            <div className={"Greeting"}>
+                <p>Hi, my name is Nivethan Sethupathi. I built this website as a place to show my music and photography.
+                Please check it out and feel free to reach out!
+                </p>
+            </div>
         </div>
+
     )
 }
