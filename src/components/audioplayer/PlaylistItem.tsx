@@ -8,10 +8,10 @@ export interface PlaylistItemProps {
     title: string;
     onClick: () => void;
 }
-
+// todo: figure out what element to use
 export const PlaylistItem: FunctionComponent<PlaylistItemProps> = ({ status, data_key, src, title, onClick }) => {
     return (
-        <p
+        <div
             className={`${styles.item} ${status === "active" ? styles.active : ""}`}
             data-key={data_key}
             src={src}
@@ -19,6 +19,6 @@ export const PlaylistItem: FunctionComponent<PlaylistItemProps> = ({ status, dat
             onClick={onClick}
         >
             {title}
-        </p>
+        </div>
     );
 };

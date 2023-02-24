@@ -45,6 +45,7 @@ body {
   --volumeLeft:  #151616;
   --playlistBackground: #18191f;
   --playlistText: #575a77;
+  --primaryText: #575a77;
   --playlistBackgroundHoverActive:  #18191f;
   --playlistTextHoverActive: #ffffff;
 }

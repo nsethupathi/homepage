@@ -1,4 +1,4 @@
-import styles from "./ButtonsBox.module.css";
+import styles from './../../css/audioplayer/ButtonsBox.module.css';
 import {FunctionComponent} from "react";
 
 export interface ButtonsBoxProps {

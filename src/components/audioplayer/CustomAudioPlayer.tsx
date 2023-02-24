@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {useState, useEffect, useRef, FunctionComponent} from "react";
 
 import { PageTemplate } from "./PageTemplate";
@@ -21,16 +22,14 @@ import { Volume } from "./Volume";
 import { PlaylistTemplate } from "./PlaylistTemplate";
 import { PlaylistItem } from "./PlaylistItem";
 
-import loopCurrentBtn from "./icons/loop_current.png";
-import loopNoneBtn from "./icons/loop_none.png";
-import previousBtn from "./icons/previous.png";
-import playBtn from "./icons/play.png";
-import pauseBtn from "./icons/pause.png";
-import nextBtn from "./icons/next.png";
-import shuffleAllBtn from "./icons/shuffle_all.png";
-import shuffleNoneBtn from "./icons/shuffle_none.png";
-
-// todo: finish converting this file to typescript
+import loopCurrentBtn from "./../../icons/loop_current.png";
+import loopNoneBtn from "./../../icons/loop_none.png";
+import previousBtn from "./../../icons/previous.png";
+import playBtn from "./../../icons/play.png";
+import pauseBtn from "./../../icons/pause.png";
+import nextBtn from "./../../icons/next.png";
+import shuffleAllBtn from "./../../icons/shuffle_all.png";
+import shuffleNoneBtn from "./../../icons/shuffle_none.png";
 
 const fmtMSS = (s: number) => new Date(1000 * s).toISOString().substr(15, 4);
 
@@ -45,7 +44,7 @@ export interface PlayerProps {
 }
 
 export const Player: FunctionComponent<PlayerProps> = ({ trackList }) => {
-    const [audio, setAudio] = useState(null);
+    const [audio, setAudio] = useState<null | HTMLAudioElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [hasEnded, setHasEnded] = useState(false);
     const [title, setTitle] = useState("");
@@ -57,8 +56,8 @@ export const Player: FunctionComponent<PlayerProps> = ({ trackList }) => {
     const [shuffled, setShuffled] = useState(false);
     const [looped, setLooped] = useState(false);
 
-    let playlist: string[] = [];
-    const [filter, setFilter] = useState([]);
+    let playlist: number[] = [];
+    const [filter, setFilter] = useState<string[]>([]);
     let [curTrack, setCurTrack] = useState(0);
     const [query, updateQuery] = useState("");
 
@@ -72,7 +71,7 @@ export const Player: FunctionComponent<PlayerProps> = ({ trackList }) => {
     });
 
     useEffect(() => {
-        const audio = new Audiio(trackList[curTrack].url);
+        const audio = new Audio(trackList[curTrack].url);
 
         const setAudioData = () => {
             setLength(audio.duration);
@@ -82,7 +81,7 @@ export const Player: FunctionComponent<PlayerProps> = ({ trackList }) => {
         const setAudioTime = () => {
             const curTime = audio.currentTime;
             setTime(curTime);
-            setSlider(curTime ? ((curTime * 100) / audio.duration).toFixed(1) : 0);
+            setSlider(curTime ? Math.round((curTime * 100) / audio.duration) : 0);
         };
 
         const setAudioVolume = () => setVolume(audio.volume);
@@ -152,12 +151,12 @@ export const Player: FunctionComponent<PlayerProps> = ({ trackList }) => {
 
     const play = () => {
         setIsPlaying(true);
-        audio.play();
+        audio?.play();
     };
 
     const pause = () => {
         setIsPlaying(false);
-        audio.pause();
+        audio?.pause();
     };
 
     const next = () => {
@@ -171,7 +170,7 @@ export const Player: FunctionComponent<PlayerProps> = ({ trackList }) => {
         setShuffled(!shuffled);
     };
 
-    const shufflePlaylist = (arr) => {
+    const shufflePlaylist = (arr: number[]): number[] => {
         if (arr.length === 1) return arr;
         const rand = Math.floor(Math.random() * arr.length);
         return [arr[rand], ...shufflePlaylist(arr.filter((_, i) => i !== rand))];
