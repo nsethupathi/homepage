@@ -3,6 +3,24 @@ import "../css/MusicPage.css"
 import {SoundCloudSection} from "./SoundCloudSection";
 import {PianoSection} from "./PianoSection";
 
+const tracks = [
+    {
+        url: process.env.PUBLIC_URL + '/snowgirls.mp3',
+        title: "Nivethan Sethupathi - Snow Girls",
+        tags: ["rock"],
+    },
+    {
+        url: process.env.PUBLIC_URL + '/heyvera.mp3',
+        title: "Nivethan Sethupathi - Hey Vera",
+        tags: ["rock"],
+    },
+    {
+        url: process.env.PUBLIC_URL + '/kenosha.mp3',
+        title: "Nivethan Sethupathi - Kenosha",
+        tags: ["rock"],
+    },
+];
+
 export const MusicPage: FunctionComponent = () => {
     return (
         <div className={"MusicParent"}>
