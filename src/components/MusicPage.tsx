@@ -1,7 +1,7 @@
 import {FunctionComponent} from "react";
 import "../css/MusicPage.css"
 import {PianoSection} from "./PianoSection";
-import {Player} from "./audioplayer/CustomAudioPlayer"
+import {Player} from "@pxlsyl/beautiful-react-ts-audio-player/lib/index.jsx"
 
 const tracks = [
     {

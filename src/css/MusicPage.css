@@ -5,3 +5,7 @@
 .MusicParent details {
     padding-top: 1rem;
 }
+
+.MusicParent summary {
+    color: white;
+}

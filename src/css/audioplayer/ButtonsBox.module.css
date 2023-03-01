@@ -1,5 +1,0 @@
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    place-items: center;
-}
