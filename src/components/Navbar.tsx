@@ -8,6 +8,9 @@ export const Navbar: FunctionComponent = () => {
                     <a href={"/music"}>Music</a>
                 </li>
                 <li className={"active"}>
+                    <a href={"/piano"}>Piano</a>
+                </li>
+                <li className={"active"}>
                     <a href={"/photography"}>Photography</a>
                 </li>
             </ul>
