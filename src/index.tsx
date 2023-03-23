@@ -5,6 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
 import "./styles.css"
+// Default theme. ~960B
+import '@vime/core/themes/default.css';
+
+// Optional light theme (extends default). ~400B
+import '@vime/core/themes/light.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
