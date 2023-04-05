@@ -1,0 +1,17 @@
+.PianoVideoParent {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: .5rem;
+    padding-bottom: 2rem;
+}
+
+.PianoVideoParent .description {
+    width: 25%;
+}
+
+.PianoVideoParent .video {
+    flex-grow: 1;
+    padding: 2rem;
+}

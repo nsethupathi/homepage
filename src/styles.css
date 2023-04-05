@@ -7,7 +7,7 @@ body {
 }
 
 .nav {
-    background-color: #663300;
+    background-color: black;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -33,10 +33,10 @@ body {
 }
 
 .nav li.active {
-    background-color: #555;
+    background-color: black;
 }
 
-.nav  li:hover{
+.nav li:hover{
     background-color: #777;
 }
 

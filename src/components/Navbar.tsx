@@ -2,7 +2,7 @@ import {FunctionComponent} from "react";
 
 export const Navbar: FunctionComponent = () => {
     return <nav className={"nav"}>
-            <a href={"/"} className={"site-title"}>Nivethan Sethupathi</a>
+            <a href={"/"} className={"site-title active"}>Home</a>
             <ul>
                 <li className={"active"}>
                     <a href={"/music"}>Music</a>

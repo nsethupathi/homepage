@@ -1,9 +1,0 @@
-.SoundcloudParent {
-    flex-direction: column;
-}
-
-.SoundcloudParent iframe {
-    width: 100%;
-    height: 166px;
-    padding-bottom: .5rem
-}

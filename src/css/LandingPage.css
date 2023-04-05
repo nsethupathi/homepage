@@ -1,5 +1,6 @@
 .LandingParent {
-    background-color: #ff751a;
+    background-color: black;
+    color: white;
     height: auto;
     flex-direction: row;
     display: flex;

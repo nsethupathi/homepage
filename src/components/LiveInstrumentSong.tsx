@@ -6,7 +6,7 @@ export interface LiveInstrumentSongProps {
     path: string
 }
 
-export const LiveInstrumentSong: FunctionComponent<LiveInstrumentSongProps> = ({title, path}: LiveInstrumentSongProps) => {
+export const LiveInstrumentSong: FunctionComponent<LiveInstrumentSongProps> = ({title, path}) => {
     return (
         <div>
             <h4>{title}</h4>

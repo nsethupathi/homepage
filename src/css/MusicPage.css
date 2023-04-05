@@ -1,4 +1,6 @@
 .MusicParent {
+    background-color: black;
+    color: white;
     flex-direction: column;
 }
 

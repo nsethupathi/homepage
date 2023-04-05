@@ -24,4 +24,5 @@ yarn-error.log*
 
 .idea/*
 
-public/*.mp3
+public/music/*
+public/videos/*
