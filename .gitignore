@@ -26,3 +26,4 @@ yarn-error.log*
 
 public/music/*
 public/videos/*
+public/images/*
