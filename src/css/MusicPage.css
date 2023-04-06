@@ -1,4 +1,5 @@
 .MusicParent {
+    height: inherit;
     background-color: black;
     color: white;
     flex-direction: column;

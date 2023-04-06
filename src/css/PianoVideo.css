@@ -1,4 +1,5 @@
 .PianoVideoParent {
+    height: inherit;
     background-color: black;
     color: white;
     display: flex;

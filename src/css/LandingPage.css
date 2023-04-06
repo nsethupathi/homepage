@@ -1,7 +1,7 @@
 .LandingParent {
     background-color: black;
     color: white;
-    height: auto;
+    height: inherit;
     flex-direction: row;
     display: flex;
 }

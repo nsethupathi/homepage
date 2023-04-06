@@ -43,3 +43,7 @@ body {
 .site-title {
     font-size: 1.8rem;
 }
+
+#root {
+    height: 100vh;
+}
